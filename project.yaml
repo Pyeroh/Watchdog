@@ -1,0 +1,12 @@
+name: WatchDog
+source:
+- src|!**.fxml
+resources: 
+- src|**.fxml|!**.java
+classpath:
+- libs|minlog*.jar|wildcard*.jar
+main: MainApp
+target: build
+---
+Build.build(project);
+Build.oneJAR(project);

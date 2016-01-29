@@ -1,6 +1,5 @@
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.nio.file.Paths;
 
 import com.esotericsoftware.minlog.Log;
 
@@ -35,7 +34,7 @@ public class MainApp extends Application {
 
 	private void initMainApp() throws MalformedURLException, IOException {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Paths.get("src", "MainApp.fxml").toUri().toURL());
+		loader.setLocation(MainApp.class.getResource("MainApp.fxml"));
 		root = loader.load();
 
 		Scene scene = new Scene(root);
@@ -45,7 +44,7 @@ public class MainApp extends Application {
 
 	private void showWatchdog() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Paths.get("src", "Watchdog.fxml").toUri().toURL());
+		loader.setLocation(MainApp.class.getResource("Watchdog.fxml"));
 		AnchorPane watchdog = loader.load();
 		root.setCenter(watchdog);
 
