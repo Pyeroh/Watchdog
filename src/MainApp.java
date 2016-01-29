@@ -2,6 +2,8 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.Paths;
 
+import com.esotericsoftware.minlog.Log;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -20,6 +22,8 @@ public class MainApp extends Application {
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Watchdog - Surveillance de fichiers");
 		this.primaryStage.setResizable(false);
+		
+		Log.INFO();
 
 		try {
 			initMainApp();
